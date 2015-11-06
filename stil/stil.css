@@ -4,11 +4,12 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: #E1F5C4;
 }
 /* Navigation */
 
 #navigation {
-	background-color: #446CB3;
+	background-color: #518106;
 	border: 0;
 	border-radius: 0;
 }
@@ -30,7 +31,7 @@ body {
 }
 #navigation a:hover {
 	background-color: white;
-    color: #446CB3;
+    color: #518106;
 }
 
 #navigation .navbar-header a {
@@ -60,19 +61,19 @@ body {
 }
 
 .navbarSearchBox::-webkit-input-placeholder { /* WebKit browsers */
-    color: #446CB3;
+    color: #518106;
     font-style: italic;
 }
 .navbarSearchBox:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #446CB3;
+    color: #518106;
     font-style: italic;
 }
 .navbarSearchBox::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #446CB3;
+    color: #518106;
     font-style: italic;
 }
 .navbarSearchBox:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: #446CB3;
+    color: #518106;
     font-style: italic;
 }
 
@@ -123,26 +124,64 @@ body {
 	height: 50px;
 }
 
-/* Tables */
+/* Tables Places */
 
-.table > thead {
-    background-color: #446CB3;
-    font-size: 20px;
-    color: white;
+.place {
+    background-color: green;
 }
 
-.table img {
-    width: 50px;
-    height: 50px;
+.place:first-of-type {
+    margin-top: 20px;
 }
 
-.tableTopics img {
-    border-radius: 35%;
+.placeImg, .placeContent{
+    float: left;
+    height: 100px;
+    background-color: white;
 }
 
-.table {
-    padding-left: 10px;
+.placeImg {
+    width: 100px;
+    padding: 10px;
 }
+
+.placeImg img {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+}
+.placeContent {
+    height: 100px;
+}
+
+.nameP, .rateP, .commentsP, .cityP {
+    float: left;
+    height: 100px;
+    padding-top: 35px;
+    margin-right: 10px;
+}
+
+.nameP h3, .cityP h3 {
+    margin-top: 0;
+}
+
+.rateP {
+    background: url('../images/images.png') no-repeat -1px -39px;
+    margin-top: 35px;
+    width: 35px;
+    height: 31px;
+}
+
+.commentsP {
+    background: url('../images/images.png') no-repeat -4px -4px;
+    margin-top: 35px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Tables Topics */
+
+
 /* Toggle Styles */
 
 #wrapper {
@@ -161,7 +200,7 @@ body {
     width: 0;
     height: 100%;
     overflow-y: hidden;
-    background: white;
+    background: black;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -175,15 +214,11 @@ body {
     width: 0;
     height: 100%;
     overflow-y: auto;
-    background: white;
+    background: black;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 260px;
 }
 
 #page-content-wrapper {
@@ -192,14 +227,10 @@ body {
     padding: 0px;
 }
 
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -260px;
-}
 
 @media(min-width:768px) {
     #wrapper {
-        padding-right: 260px;
+        padding-right: 15%;
     }
 
     #wrapper.toggled {
@@ -207,8 +238,7 @@ body {
     }
 
     #sidebar-wrapper {
-        width: 260px;
-    	border-left: 1px solid #507642;
+        width: 15%;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -227,12 +257,12 @@ body {
     
 }
 
-@media(min-width: 950px) {
+@media(min-width: 1000px) {
 	#wrapper {
-		padding-left: 260px;
+		padding-left: 15%;
 	}
     #sidebar-wrapper-left {
-    	width: 260px;
+    	width: 15%;
     }
 
     .navbarSearch {
