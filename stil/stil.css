@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #E1F5C4;
+    background-color: #EFEDEE;
 }
 /* Navigation */
 
@@ -126,62 +126,95 @@ body {
 
 /* Tables Places */
 
+.table {
+    margin-top: 10px;
+}
+
 .place {
-    background-color: green;
+    width: 100%;
+    background-color: #DCDED3;
+    margin-top: 2px;
 }
 
-.place:first-of-type {
-    margin-top: 20px;
+.place h3 {
+    margin: 0;
 }
 
-.placeImg, .placeContent{
+.placeImg, .placeContent, .placeContentText, .placeContentRating, .placeContentComments {
     float: left;
-    height: 100px;
-    background-color: white;
+}
+.place:first-of-type {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
+.place:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 .placeImg {
-    width: 100px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .placeImg img {
+    height: 60px;
     width: 80px;
-    height: 80px;
-    border-radius: 18px;
-}
-.placeContent {
-    height: 100px;
+    border-radius: 15px;
 }
 
-.nameP, .rateP, .commentsP, .cityP {
-    float: left;
-    height: 100px;
-    padding-top: 35px;
-    margin-right: 10px;
+.placeContentText {
+    min-height: 70px;
+    width: 150px;
 }
 
-.nameP h3, .cityP h3 {
-    margin-top: 0;
+.placeContentName, .placeContentLocation {
+    height: 50%;
 }
 
-.rateP {
-    background: url('../images/images.png') no-repeat -1px -39px;
-    margin-top: 35px;
-    width: 35px;
-    height: 31px;
+.placeContentRating {
+    padding: 20px 5px 20px 5px;
 }
 
-.commentsP {
+.placeContentRating img {
+    height: 30px;
+}
+
+.placeContentCommentsImg {
     background: url('../images/images.png') no-repeat -4px -4px;
-    margin-top: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
     width: 30px;
     height: 30px;
 }
 
-/* Tables Topics */
+@media(min-width: 1200px) {
+    .placeContentText {
+        min-height: 70px;
+        width: 80px;
+    }
+}
 
 
+@media(min-width: 1450px) {
+    .placeContentText {
+        min-height: 70px;
+        width: 200px;
+    }
+}
+
+@media(min-width: 1760px) {
+    .placeContentText {
+        min-height: 70px;
+        width: 250px;
+    }
+}
+
+@media(min-width: 1920px) {
+    .placeContentText {
+        min-height: 70px;
+        width: 300px;
+    }
+}
 /* Toggle Styles */
 
 #wrapper {
@@ -200,7 +233,7 @@ body {
     width: 0;
     height: 100%;
     overflow-y: hidden;
-    background: black;
+    background: #518106;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -214,7 +247,7 @@ body {
     width: 0;
     height: 100%;
     overflow-y: auto;
-    background: black;
+    background: #518106;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
